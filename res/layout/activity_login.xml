@@ -21,8 +21,9 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="登录"
+            android:padding="5dp"
             android:textColor="#FFF"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/button_to_register"
@@ -31,6 +32,7 @@
             android:layout_alignParentRight="true"
             android:textColor="#FFF"
             android:textSize="20sp"
+            android:layout_marginRight="12dp"
             android:layout_centerVertical="true"
             android:text="注册" />
 
@@ -38,8 +40,8 @@
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_below="@+id/RelativeLayout1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
@@ -52,6 +54,7 @@
         android:layout_below="@+id/imageView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
+        android:hint="请输入登陆账号"
         android:ems="10" >
 
         <requestFocus />
@@ -64,16 +67,17 @@
         android:layout_below="@+id/editText1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
+        android:hint="请输入登陆密码"
         android:ems="10"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:text="登录" />
 
     <RelativeLayout
@@ -90,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
             android:text="忘记密码？" />
 
         <TextView
@@ -98,6 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
             android:text="短信验证码登录" />
 
     </RelativeLayout>
