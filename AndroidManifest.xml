@@ -14,8 +14,8 @@
         android:allowBackup="true"
         android:name=".MyApplication"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/android:Theme.Light.NoTitleBar" >
+        android:theme="@android:style/Theme.Holo.Light"
+        android:label="@string/app_name" >
         <activity
             android:name="com.cbuu.highnight.LoginActivity"
             android:label="@string/app_name" >

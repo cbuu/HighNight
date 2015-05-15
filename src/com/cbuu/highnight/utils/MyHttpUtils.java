@@ -1,4 +1,4 @@
-package com.cbuu.highnight;
+package com.cbuu.highnight.utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,7 +23,6 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 import com.cbuu.highnight.common.OnRespondListener;
-import com.cbuu.highnight.utils.Logger;
 
 
 public class MyHttpUtils {
