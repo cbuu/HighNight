@@ -30,6 +30,9 @@ public class LoginActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		
+		final float scale = getResources().getDisplayMetrics().density;  
+	    Logger.log(scale + "  "+(int) (200 / scale + 0.5f));
 
 		initActionBar();
 		initView();
