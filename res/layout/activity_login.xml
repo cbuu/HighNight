@@ -6,22 +6,20 @@
     android:orientation="vertical"
     tools:context="com.cbuu.highnight.LoginActivity" >
 
-
-
-    <ImageView
-        android:id="@+id/imageView1"
+    <com.cbuu.highnight.common.CircularImage
+        android:id="@+id/login_avatar"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_below="@+id/RelativeLayout1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/avatar" />
 
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView1"
+        android:layout_below="@+id/login_avatar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
         android:hint="请输入登陆账号"
@@ -59,7 +57,7 @@
         android:layout_marginTop="15dp" >
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/button_forget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -68,7 +66,7 @@
             android:text="忘记密码？" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/button_verification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
