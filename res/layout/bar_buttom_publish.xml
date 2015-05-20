@@ -3,12 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/bar_buttom"
-    android:background="#000" >
+    android:background="#333" >
 
     <ImageButton
         android:id="@+id/button_publish"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_margin="10dp"
