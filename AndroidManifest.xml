@@ -33,6 +33,10 @@
             android:name="com.cbuu.highnight.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
+       
+        <activity
+            android:name="com.cbuu.highnight.SingleChatActivity">
+        </activity>
     </application>
 
 </manifest>

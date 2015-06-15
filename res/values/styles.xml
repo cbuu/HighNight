@@ -16,5 +16,10 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    <style name="publish_dialog_anim" parent="android:Animation">  
+        <item name="@android:windowEnterAnimation">@anim/publish_dialog_enter</item>  //进入时的动画  
+        <item name="@android:windowExitAnimation">@anim/publish_dialog_exit</item>    //退出时的动画  
+    </style>
 
 </resources>

@@ -36,6 +36,8 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 	private List<MyFragment> fragments = null;
 	
 	private int curFragmentNum = 0;
+	
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +45,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 		setContentView(R.layout.activity_main);
 		
 		initActionBar();
-
 		addTabs();
-		
 		
 	}
 	
