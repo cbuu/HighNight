@@ -58,10 +58,10 @@ public class ChatAdapter extends BaseAdapter{
 	}
 
 	@Override
-	public View getView(int arg0, View view, ViewGroup arg2) {
+	public View getView(int position, View view, ViewGroup arg2) {
 
-		int type = getItemViewType(arg0);
-		String m = messages.get(arg0).getContent();
+		int type = getItemViewType(position);
+		String m = messages.get(position).getContent();
 		Holder holder = null;
 
 		if (view==null) {

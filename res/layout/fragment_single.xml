@@ -8,11 +8,4 @@
         android:id="@+id/content_single"
         layout="@layout/single_item" />
 
-    <include
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        layout="@layout/bar_buttom_publish" />
-
 </RelativeLayout>

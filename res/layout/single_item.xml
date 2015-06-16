@@ -117,13 +117,15 @@
                 android:textSize="20sp" />
         </RelativeLayout>
 
-        <ImageButton
+        <Button
             android:id="@+id/button_contact"
             android:layout_width="45dp"
             android:layout_height="20dp"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:src="@drawable/img" />
+            android:background="@drawable/img"
+            android:textSize="10sp"
+            android:text="私聊Ta" />
     </RelativeLayout>
 
 </RelativeLayout>

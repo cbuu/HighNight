@@ -37,6 +37,11 @@
         <activity
             android:name="com.cbuu.highnight.SingleChatActivity">
         </activity>
+        
+        <activity
+            android:name="com.cbuu.highnight.UserDataActivity">
+        </activity>
+        
     </application>
 
 </manifest>
