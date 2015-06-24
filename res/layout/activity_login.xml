@@ -10,13 +10,12 @@
         android:id="@+id/login_avatar"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_below="@+id/RelativeLayout1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
         android:src="@drawable/avatar" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/edit_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_avatar"
@@ -29,10 +28,10 @@
     </EditText>
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edit_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText1"
+        android:layout_below="@+id/edit_username"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:hint="请输入登陆密码"
@@ -43,7 +42,7 @@
         android:id="@+id/button_login"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/edit_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="登录" />

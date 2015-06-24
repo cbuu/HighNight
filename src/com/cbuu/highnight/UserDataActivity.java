@@ -35,7 +35,7 @@ public class UserDataActivity extends Activity{
 		actionBar.setDisplayShowHomeEnabled(false);
 		actionBar.setDisplayShowTitleEnabled(false);
 
-		backButton = (Button) customActionbar.findViewById(R.id.button_back_register);
+		backButton = (Button) customActionbar.findViewById(R.id.button_back_userdata);
 		
 		backButton.setOnClickListener(new View.OnClickListener() {
 			

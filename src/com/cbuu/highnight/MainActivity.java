@@ -4,39 +4,31 @@ package com.cbuu.highnight;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.cbuu.highnight.adapter.MyPagerAdapter;
 import com.cbuu.highnight.base.MyFragment;
 import com.cbuu.highnight.common.CircularImage;
 import com.cbuu.highnight.dialog.PublishDialog;
 import com.cbuu.highnight.fragment.FriendsFragment;
 import com.cbuu.highnight.fragment.GroupFragment;
 import com.cbuu.highnight.fragment.SingleFragment;
-import com.cbuu.highnight.utils.Logger;
+
+
+
+
 
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.app.Notification.Action;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.util.Log;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.ListView;
-import android.widget.TextView;
 
-public class MainActivity extends Activity implements ActionBar.TabListener{
+public class MainActivity extends FragmentActivity implements ActionBar.TabListener{
 	
 	private List<MyFragment> fragments = null;
 	
@@ -77,7 +69,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 		fragments.add(new FriendsFragment("好友"));
 		
 		
-		FragmentManager manager = getFragmentManager();
+		FragmentManager manager = getSupportFragmentManager();
 		FragmentTransaction transaction = manager.beginTransaction();
 		
 		ActionBar actionBar = getActionBar();  
@@ -86,7 +78,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
             actionBar.addTab(actionBar.newTab()  
                     .setText(fragment.getTabName())  
                     .setTabListener(this));  
-            transaction.add(R.id.fragment_layout,(Fragment)fragment);
+            transaction.add(R.id.fragment_layout,fragment);
             transaction.hide(fragment);
         }
         
@@ -126,17 +118,18 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 
 
 	@Override
-	public void onTabReselected(Tab arg0, FragmentTransaction arg1) {
+	public void onTabReselected(Tab arg0, android.app.FragmentTransaction arg1) {
+		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void onTabSelected(Tab tab, FragmentTransaction arg1) {
+	public void onTabSelected(Tab tab, android.app.FragmentTransaction arg1) {
 		if (tab.getPosition() ==  curFragmentNum) {
 			return;
 		}
 		
-		FragmentTransaction transaction = getFragmentManager().beginTransaction();
+		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 		transaction.hide(fragments.get(curFragmentNum));
 		curFragmentNum = tab.getPosition();
 		transaction.show(fragments.get(curFragmentNum));
@@ -144,7 +137,9 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 	}
 
 	@Override
-	public void onTabUnselected(Tab arg0, FragmentTransaction arg1) {
+	public void onTabUnselected(Tab arg0, android.app.FragmentTransaction arg1) {
+		// TODO Auto-generated method stub
 		
 	}
+
 }

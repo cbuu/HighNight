@@ -97,7 +97,7 @@
             android:orientation="horizontal" >
 
             <ImageButton
-                android:id="@+id/imageButton1"
+                android:id="@+id/button_dislike"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_alignBaseline="@+id/num_dislike"
@@ -112,19 +112,20 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/imageButton1"
+                android:layout_toRightOf="@+id/button_dislike"
                 android:text="0"
                 android:textSize="20sp" />
         </RelativeLayout>
 
         <Button
             android:id="@+id/button_contact"
-            android:layout_width="45dp"
-            android:layout_height="20dp"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:background="@drawable/img"
-            android:textSize="10sp"
+            android:textSize="12sp"
+            android:layout_marginRight="10dp"
             android:text="私聊Ta" />
     </RelativeLayout>
 
