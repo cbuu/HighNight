@@ -1,15 +1,22 @@
 package com.cbuu.highnight.common;
 
-import java.sql.Date;
-
 public class Weibo {
 	private int id;
-	private int userId;
+	
 	private String text;
-	private String picPath;
+							private String picPath;
+	
 	private int starNum;
 	private int shitNum;
-	private Date date;
+	
+	private long time;
+	
+	private int userId;
+	private String posterName;
+	
+	
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -46,11 +53,17 @@ public class Weibo {
 	public void setShitNum(int shitNum) {
 		this.shitNum = shitNum;
 	}
-	public Date getDate() {
-		return date;
+	public String getPosterName() {
+		return posterName;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+	public void setPosterName(String posterName) {
+		this.posterName = posterName;
+	}
+	public long getTime() {
+		return time;
+	}
+	public void setTime(long time) {
+		this.time = time;
 	}
 
 }

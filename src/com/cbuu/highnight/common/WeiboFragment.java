@@ -1,7 +1,12 @@
 package com.cbuu.highnight.common;
 
+import com.cbuu.highnight.MainActivity;
 import com.cbuu.highnight.R;
+import com.cbuu.highnight.SingleChatActivity;
+import com.cbuu.highnight.utils.MyDateUtil;
 
+import android.R.integer;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -31,8 +36,13 @@ public class WeiboFragment extends Fragment implements View.OnClickListener{
 	
 	private Button contactButton;
 	
-	public WeiboFragment(Weibo weibo){
+	private int order;
+	private int sum;
+	
+	public WeiboFragment(Weibo weibo,int order,int sum){
 		this.weibo = weibo;
+		this.order = order;
+		this.sum = sum;
 	}
 	
 	@Override
@@ -49,9 +59,14 @@ public class WeiboFragment extends Fragment implements View.OnClickListener{
 		dislikeNum = (TextView)view.findViewById(R.id.num_dislike);
 		
 		likeButton = (ImageButton)view.findViewById(R.id.button_like);
-		likeButton = (ImageButton)view.findViewById(R.id.button_like);
+		dislikeButton = (ImageButton)view.findViewById(R.id.button_dislike);
 		
 		contactButton = (Button)view.findViewById(R.id.button_contact);
+		
+		likeButton.setOnClickListener(this);
+		dislikeButton.setOnClickListener(this);
+		contactButton.setOnClickListener(this);
+		
 		
 		bindData();
 		
@@ -66,19 +81,21 @@ public class WeiboFragment extends Fragment implements View.OnClickListener{
 		content.setText(weibo.getText());
 		dislikeNum.setText(""+weibo.getShitNum());
 		likeNum.setText(""+weibo.getStarNum());
+		publishTime.setText(MyDateUtil.getShowTimeString(weibo.getTime()));
+		number.setText(order+"/"+sum);
+		
 	}
 
 	@Override
-	public void onClick(View arg0) {
-		switch (arg0.getId()) 
+	public void onClick(View view) {
+		switch (view.getId()) 
 		{
 		case R.id.button_contact:
-			
+			startActivity(new Intent(getActivity(),SingleChatActivity.class));
 			break;
 		case R.id.button_dislike:
 			
 			break;
-			
 		case R.id.button_like:
 			
 			break;

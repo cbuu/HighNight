@@ -69,14 +69,20 @@ public class SingleFragment extends MyFragment {
 		weibo.setShitNum(100);
 		weibo.setStarNum(200);
 		weibo.setText("我日你");
-		weibo.setDate(new Date(System.currentTimeMillis()));
+		weibo.setTime(System.currentTimeMillis());
+		weibo.setId(1);
 		
-		fragments.add(new WeiboFragment(weibo));
+		weibos.add(weibo);
+		weibos.add(weibo);
+		weibos.add(weibo);
+		weibos.add(weibo);
+		
+		fragments.add(new WeiboFragment(weibos.get(0),1,weibos.size()));
 
-		fragments.add(new WeiboFragment(weibo));
+		fragments.add(new WeiboFragment(weibos.get(1),2,weibos.size()));
 
-		fragments.add(new WeiboFragment(weibo));
+		fragments.add(new WeiboFragment(weibos.get(2),3,weibos.size()));
 
-		fragments.add(new WeiboFragment(weibo));
+		fragments.add(new WeiboFragment(weibos.get(3),4,weibos.size()));
 	}
 }
